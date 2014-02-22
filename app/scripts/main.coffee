@@ -5,17 +5,20 @@ window.corks =
   Routers: {}
   init: ->
     'use strict'
-    console.log 'Hello from Backbone!'
+
+    Backbone.history.start({pushState: true})
+
+    pins     = new this.Collections.PinCollection(window.seed)
+    pinsView = new this.Views.PincollectionView({collection: pins})
+
+    pinsView.render()
+
 
 $(document).ready ->
-  'use strict'
   corks.init();
 
-  newPin = new corks.Models.PinModel()
-  console.log(newPin.get('title'))
 
-
-window.data = [
+window.seed = [
     {
         "id": 0,
         "picture": "http://placehold.it/256x256",

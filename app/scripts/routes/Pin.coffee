@@ -6,6 +6,9 @@ class corks.Routers.PinRouter extends Backbone.Router
     'pin/:id': 'show'
   }
 
+  initialize: ->
+    this.pins = new PinCollection()
+
   index: ->
     # something
 
