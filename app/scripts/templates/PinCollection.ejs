@@ -1,2 +1,31 @@
-<%= title %>
-<%= id %>
+<a href="javascript:" class="pins__return-to-top js_go-to-top">
+  &#x25B2;
+</a>
+
+<div class="pins__item pins__item--new-pin">
+  <a href="javascript:" class="pins__item__delete js-delete"><span>Cancel</span> &times;</a>
+
+  <div class="pins__item__image-container">
+    <img src="/images/new-pin.gif" alt="">
+
+    <div class="pins__item__new-pin-fields">
+      <input class="js_pin-src" type="text" placeholder="Content">
+
+      <select name="js_pin-type" id="">
+        <option value="image">Image</option>
+        <option value="video">Video</option>
+        <option value="text">Text</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="pins__item__details">
+    <h2 class="pins__item__details__title">
+      Click to add a new pin.
+    </h2>
+
+    <input class="pins__item__title-input js_pin-title" type="text" placeholder="Click to add a new pin.">
+  </div>
+
+  <a href="javascript:" class="pins__item__action js_add-pin btn btn-success">Create</a>
+</div>

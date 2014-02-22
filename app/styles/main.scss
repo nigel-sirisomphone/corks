@@ -1,4 +1,19 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
+// mixins & stuff
+@import 'reset-scss/reset';
 @import 'sass-bootstrap/lib/bootstrap';
-@import '../scss/page-title';
+@import '_palette';
+
+// app
+@import '_header';
+@import '_pins';
+@import '_salvattore';
+
+body {
+  background: url(/images/cork.jpg);
+}
+
+.clear-float {
+  clear: both;
+  display: block;
+}

@@ -1,0 +1,26 @@
+<a href="javascript:" class="pins__item__delete js-delete"><span>Cancel</span> &times;</a>
+
+<div class="pins__item__image-container">
+  <img src="<%= src || '/images/new-pin.gif'%>" alt="">
+
+  <div class="pins__item__new-pin-fields">
+    <input class="js_pin-src" type="text" value="<%= src %>">
+
+    <select name="js_pin-type" id="">
+      <option value="<%= type %>"><%= type %></option>
+      <% if(type !== 'image') { %><option value="image">image</option><% } %>
+      <% if(type !== 'video') { %><option value="video">video</option><% } %>
+      <% if(type !== 'text')  { %><option value="text">text</option><% } %>
+    </select>
+  </div>
+</div>
+
+<div class="pins__item__details">
+  <h2 class="pins__item__details__title">
+    <%= title %>
+  </h2>
+
+  <input class="pins__item__title-input js_pin-title" type="text" value="<%= title %>">
+</div>
+
+<a href="javascript:" class="pins__item__action js_save-pin btn btn-primary">Save</a>
