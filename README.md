@@ -1,4 +1,0 @@
-corks
-=====
-
-Digital corkboard.
