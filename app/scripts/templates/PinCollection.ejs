@@ -3,13 +3,13 @@
 </a>
 
 <div class="pins__item pins__item--new-pin">
-  <a href="javascript:" class="pins__item__delete js-delete"><span>Cancel</span> &times;</a>
+  <a href="javascript:" class="pins__item__delete js_cancel-edit"><span>Cancel</span> &times;</a>
 
   <div class="pins__item__image-container">
     <img src="/images/new-pin.gif" alt="">
 
     <div class="pins__item__new-pin-fields">
-      <input class="js_pin-src" type="text" placeholder="Content">
+      <textarea class="js_pin-src" placeholder="Paste in an image url or video embed code" draggable="false"></textarea>
 
       <select name="js_pin-type" id="">
         <option value="image">Image</option>
@@ -24,7 +24,7 @@
       Click to add a new pin.
     </h2>
 
-    <input class="pins__item__title-input js_pin-title" type="text" placeholder="Click to add a new pin.">
+    <input class="pins__item__title-input js_pin-title" type="text" placeholder="Name your pin something snazzy">
   </div>
 
   <a href="javascript:" class="pins__item__action js_add-pin btn btn-success">Create</a>

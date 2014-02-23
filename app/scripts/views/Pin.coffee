@@ -12,8 +12,9 @@ class corks.Views.PinView extends Backbone.View
   }
 
   events: {
-    'click'     : 'edit',
-    'click .js_save-pin': 'registerChanges',
+    'click'               : 'edit',
+    'click .js_save-pin'  : 'registerChanges',
+    'click .js_delete-pin': 'delete'
   }
 
   initialize: ->
@@ -63,3 +64,8 @@ class corks.Views.PinView extends Backbone.View
     )
 
     this.model.save()
+
+  delete: ->
+    this.model.destroy()
+    this.remove()
+    return
