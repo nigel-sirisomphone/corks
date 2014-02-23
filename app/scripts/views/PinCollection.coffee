@@ -24,6 +24,7 @@ class corks.Views.PincollectionView extends Backbone.View
       }, 200)
     'click a.js_add-pin'         : 'savePin'
     'click .pins__item--new-pin' : 'createPin'
+    'click a.js_cancel-edit'     : 'clearInputs'
   }
 
   watchPins: ->
@@ -61,7 +62,7 @@ class corks.Views.PincollectionView extends Backbone.View
       type : $(this.$el.find('select option:selected')).attr('value')
     }))
 
-    this.$el.find('input').val('')
+    this.clearInputs()
 
   addPin: (pin) ->
     view = new corks.Views.PinView({model: pin})
@@ -69,6 +70,9 @@ class corks.Views.PincollectionView extends Backbone.View
     this.$el.append(view.render().el)
 
     this.initFreetile()
+
+  clearInputs: ->
+    this.$el.find('input, textarea').val('')
     
 
   addAllPins: ->
